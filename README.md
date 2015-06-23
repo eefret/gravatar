@@ -27,4 +27,4 @@ Gravatar is a tiny go library for accessing gravatar.com avatar images.
 
 ## License
 
-You can use jgravatar under the terms of the Apache v2 license:
+You can use gravatar under the terms of the Apache v2 license:
