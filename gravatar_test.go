@@ -27,7 +27,7 @@ func TestGravatarURLParse(t *testing.T) {
 	assert.Equal(t, "https://www.gravatar.com/avatar/c82739de14cf64affaf30856ca95b851.jpg?d=&r=g&s=80",
 		g.URLParse(myEmail), "Should be equal")
 
-	g.setSize(uint(256))
+	g.SetSize(uint(256))
 	assert.Equal(t, "https://www.gravatar.com/avatar/c82739de14cf64affaf30856ca95b851.jpg?d=&r=g&s=256",
 		g.URLParse(myEmail), "Should be equal")
 }
@@ -46,7 +46,7 @@ func TestGravatarDownloadToDisk(t *testing.T) {
 	if err != nil {
 		t.Error("An error has ocurred instantiating Gravatar")
 	}
-	g.setSize(uint(512))
+	g.SetSize(uint(512))
 	g.DownloadToDisk(myEmail, "/tmp/avatar.jpg")
 	file, err := ioutil.ReadFile("/tmp/avatar.jpg")
 	assert.NoError(t, err, "should not be any errors")

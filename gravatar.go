@@ -10,8 +10,8 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/eefret/gogravatar/default_img"
-	"github.com/eefret/gogravatar/rating"
+	"github.com/eefret/gravatar/default_img"
+	"github.com/eefret/gravatar/rating"
 )
 
 const (
@@ -64,16 +64,16 @@ func (g *Gravatar) URLParse(email string) string {
 	return g.parseURI(emailToHash(email)).String()
 }
 
-func (g *Gravatar) setSize(size uint) {
+func (g *Gravatar) SetSize(size uint) {
 
 	g.size = size
 }
 
-func (g *Gravatar) setDefaultImage(defaultImage default_img.DefaultImageType) {
+func (g *Gravatar) SetDefaultImage(defaultImage default_img.DefaultImageType) {
 	g.defaultImage = defaultImage
 }
 
-func (g *Gravatar) setRating(rating rating.RatingType) {
+func (g *Gravatar) SetRating(rating rating.RatingType) {
 	g.rating = rating
 }
 
