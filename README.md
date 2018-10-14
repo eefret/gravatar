@@ -16,7 +16,7 @@ Gravatar is a tiny go library for accessing gravatar.com avatar images.
 		data, err := g.Download("eefretsoul@gmail.com")
 		// Returns []byte containing the Image with modified size to 256px
 		
-		g.setSize(uint(512))
+		g.SetSize(uint(512))
 		g.DownloadToDisk("eefretsoul@gmail.com", "/tmp/avatar.jpg")
 		// Saves to /tmp our avatar image file with a size of 512
 		
